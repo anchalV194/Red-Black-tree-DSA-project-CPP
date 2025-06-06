@@ -1,0 +1,111 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background for better contrast */
+    margin: 0;
+    padding: 0;
+    color: #e0e0e0;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+#tree-container {
+    position: relative;
+    width: 80%;
+    height: 700px;
+    margin: 20px auto;
+    border: 2px solid #333;
+    background-color: #1e1e1e;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+.node {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    z-index: 1; /* Set z-index to 1 */
+  }
+  .node.black {
+    background-color: #000; /* Black nodes */
+  }
+  
+  .node.red {
+    background-color: #f00; /* Red nodes */
+  }
+
+.node:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+}
+
+.line {
+    position: absolute;
+    border: 2px solid #fff; /* White lines for visibility */
+    border-radius: 2px;
+    background-color: #fff;
+    z-index: 0; /* Set z-index to 0 */
+  }
+.controls {
+    margin-top: 20px;
+}
+
+input {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #e0e0e0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    margin-right: 10px;
+}
+
+button {
+    padding: 12px 18px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    background-color: #2d1e84; /* Green */
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #2d1e84;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+    background-color: #2d1e84;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+/* Adding styles for the description */
+.description {
+    color: #e0e0e0;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center; /* Add this to left-align the text */
+}
+.description-list {
+    color: #e0e0e0;
+    font-size: 20px;
+    list-style-type: disc;
+    margin-bottom: 20px;
+    padding-left: 200px; /* Remove the padding to left-align the list */
+    text-align: left; /* Add this to left-align the text */
+}

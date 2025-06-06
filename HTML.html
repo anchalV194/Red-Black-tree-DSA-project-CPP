@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red-Black Tree Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Red-Black Tree Visualization</h1>
+        <p class="description">
+            A <strong>Red-Black Tree</strong> is a type of self-balancing binary search tree where each node is colored either red or black. 
+            It ensures that the tree remains balanced after insertions or deletions. Key properties of the Red-Black Tree include:
+        </p>
+        <ul class="description-list">
+            <li>Each node is either red or black.</li>
+            <li>The root is always black.</li>
+            <li>Red nodes cannot have red children (no two consecutive red nodes).</li>
+            <li>Every path from the root to a leaf has the same number of black nodes, ensuring balance.</li>
+            <li>Insertion and deletion operations are followed by rotations and recoloring to maintain tree properties.</li>
+        </ul>
+        <p class="description">
+            This visualization allows you to insert values into the tree, observe how it maintains balance, and understand the inner workings of a Red-Black Tree. Red nodes are shown in red, and black nodes in black.
+        </p>
+
+        <div id="tree-container"></div>
+        <div class="controls">
+            <input type="number" id="value-input" placeholder="Enter value">
+            <button onclick="insert()">Insert</button>
+            <button onclick="deleteNode()">Delete</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
